@@ -29,3 +29,4 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
 antigen apply
+unalias md
