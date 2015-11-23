@@ -11,6 +11,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
+antigen bundle grails
 antigen bundle mvn
 antigen bundle sudo
 antigen bundle command-not-found
@@ -29,5 +30,5 @@ if [[ ! -L ~/.zshrc ]]; then
     ln -s ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/.zshrc ~/.zshrc
 fi
 
-source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/system.sh
 unalias md
+source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/system.sh
