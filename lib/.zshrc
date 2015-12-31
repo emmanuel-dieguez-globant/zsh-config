@@ -14,6 +14,7 @@ antigen bundle git
 antigen bundle grails
 antigen bundle mvn
 antigen bundle sudo
+antigen bundle pip
 antigen bundle command-not-found
 
 antigen theme edieguez/zsh-config themes/aya
