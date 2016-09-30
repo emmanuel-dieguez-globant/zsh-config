@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-which brewy &> /dev/null
+which brew &> /dev/null
 
 if [[ $? == 0 ]]; then
     echo "Brew is installed in this system"
