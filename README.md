@@ -1,2 +1,2 @@
 # zsh-config
-wget https://raw.githubusercontent.com/edieguez/zsh-config/master/lib/.zshrc
+wget https://raw.githubusercontent.com/edieguez/zsh-config/master/system/.zshrc

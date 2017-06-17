@@ -28,8 +28,8 @@ antigen apply
 # Custom configuration
 if [[ ! -L ~/.zshrc ]]; then
     rm ~/.zshrc
-    ln -s ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/system/.zshrc ~/.zshrc
+    ln -s ~/.antigen/bundles/edieguez/zsh-config/system/.zshrc ~/.zshrc
 fi
 
 unalias md
-source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/system/system.sh
+source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
