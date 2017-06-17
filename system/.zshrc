@@ -11,16 +11,12 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-# antigen bundle mercurial
-# antigen bundle grails
 antigen bundle mvn
 antigen bundle sudo
-# antigen bundle pip
-# antigen bundle vagrant
-# antigen bundle command-not-found
 antigen bundle extract
 antigen bundle zsh-users/zsh-autosuggestions
 
+# Apply prompt theme
 antigen theme edieguez/zsh-config themes/aya
 
 # Syntax highlighting bundle.
@@ -32,8 +28,8 @@ antigen apply
 # Custom configuration
 if [[ ! -L ~/.zshrc ]]; then
     rm ~/.zshrc
-    ln -s ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/.zshrc ~/.zshrc
+    ln -s ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/system/.zshrc ~/.zshrc
 fi
 
 unalias md
-source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/system.sh
+source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/system/system.sh
