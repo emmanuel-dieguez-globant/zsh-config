@@ -9,6 +9,8 @@ main() {
     local IFS='
 '
     brew update
+    brew upgrade
+
     packages="$(brew cask list --versions)"
 
     for line in $packages; do
@@ -24,6 +26,7 @@ main() {
         fi
     done
 
+    brew cleanup
     brew cask cleanup
 }
 
