@@ -7,3 +7,5 @@ alias node-clean="npm ls -gp --depth=0 | awk -F/ '/node_modules/ && !/\/npm$/ {p
 #alias nyan_cat_telnet='timeout 10 telnet nyancat.dakko.us'
 #alias byakuren="grep -o --binary-files=text '[[:alpha:]]' /dev/urandom | tr -d '[a-zA-Z]' | xargs -n $(($COLUMNS-20)) | tr -d ' ' | lolcat -f | pv -qL32k"
 #alias rainbow='yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done'
+
+unalias md
