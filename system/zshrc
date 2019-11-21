@@ -1,7 +1,7 @@
 # Clone antigen and custom repos
 if [[ ! -e ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
-    git clone git@github.com:emmanuel-dieguez-globant/zsh-config.git ~/.antigen/bundles/edieguez
+    git clone https://github.com/emmanuel-dieguez-globant/zsh-config.git ~/.antigen/bundles/emmanuel-dieguez-globant
 fi
 
 # Antigen configuration
@@ -11,10 +11,10 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Load custom configuration
-source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
+source ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config/system/system.sh
 
 # Apply prompt theme
-antigen theme edieguez/zsh-config themes/aya
+antigen theme emmanuel-dieguez-globant/zsh-config themes/aya
 
 # Tell antigen that you're done.
 antigen apply
@@ -22,5 +22,5 @@ antigen apply
 # Custom configuration
 if [[ ! -L ~/.zshrc ]]; then
     rm ~/.zshrc
-    ln -s ~/.antigen/bundles/edieguez/zsh-config/system/zshrc ~/.zshrc
+    ln -s ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config/system/zshrc ~/.zshrc
 fi
