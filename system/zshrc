@@ -1,7 +1,7 @@
 # Clone antigen and custom repos
 if [[ ! -e ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
-    git clone https://github.com/emmanuel-dieguez-globant/zsh-config.git ~/.antigen/bundles/emmanuel-dieguez-globant
+    git clone https://github.com/emmanuel-dieguez-globant/zsh-config.git ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config
 fi
 
 # Antigen configuration
