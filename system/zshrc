@@ -1,6 +1,7 @@
 # Clone antigen and custom repos
 if [[ ! -e ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
+    git clone git@github.com:emmanuel-dieguez-globant/zsh-config.git ~/.antigen/bundles/edieguez
 fi
 
 # Antigen configuration
@@ -9,11 +10,11 @@ source ~/.antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-# Apply prompt theme
-antigen theme edieguez/zsh-config themes/aya
-
 # Load custom configuration
 source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
+
+# Apply prompt theme
+antigen theme edieguez/zsh-config themes/aya
 
 # Tell antigen that you're done.
 antigen apply
