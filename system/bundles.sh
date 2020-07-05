@@ -2,7 +2,7 @@
 antigen use oh-my-zsh
 
 # Apply prompt theme
-antigen theme emmanuel-dieguez-globant/zsh-config themes/aya
+antigen theme edieguez/zsh-config themes/aya
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle cp
