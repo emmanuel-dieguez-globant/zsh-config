@@ -1,7 +1,3 @@
-load() {
-    source "$ROOT_DIR/lib/$*"
-}
-
 md() {
     mkdir -vp "$*" && cd "$*"
 }

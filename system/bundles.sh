@@ -1,14 +1,7 @@
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+source <(antibody init)
 
-# Apply prompt theme
-antigen theme edieguez/zsh-config themes/aya
+antibody bundle robbyrussell/oh-my-zsh path:plugins/extract
+antibody bundle robbyrussell/oh-my-zsh path:plugins/sudo
+antibody bundle robbyrussell/oh-my-zsh path:plugins/z
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle cp
-antigen bundle extract
-antigen bundle git
-antigen bundle z
-
-# Tell antigen that you're done.
-antigen apply
+antibody bundle edieguez/zsh-config path:themes/aya.zsh-theme
