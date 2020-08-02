@@ -1,17 +1,17 @@
 # Needs Git plugin for current_branch method
 
 # Color shortcuts
-RED=$fg[red]
-YELLOW=$fg[yellow]
-GREEN=$fg[green]
-WHITE=$fg[white]
-BLUE=$fg[blue]
-RED_BOLD=$fg_bold[red]
-YELLOW_BOLD=$fg_bold[yellow]
-GREEN_BOLD=$fg_bold[green]
-WHITE_BOLD=$fg_bold[white]
-BLUE_BOLD=$fg_bold[blue]
-RESET_COLOR=$reset_color
+RED=[31m
+YELLOW=[33m
+GREEN=[32m
+WHITE=[37m
+BLUE=[34m
+RED_BOLD="[01;31m"
+YELLOW_BOLD="[01;33m"
+GREEN_BOLD="[01;32m"
+WHITE_BOLD="[01;37m"
+BLUE_BOLD="[01;34m"
+RESET_COLOR=[00m
 
 if [[ -n $SSH_CONNECTION ]]; then
     PROMPT="%{$RED_BOLD%}(ssh) "
@@ -45,8 +45,8 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 return_code="%(?..%{$RED%}%? %{$RESET_COLOR%})"
 
 # Prompt format
-PROMPT+='%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(git_prompt_ahead)%{$RESET_COLOR%} ${return_code}%{$BLUE%}>%{$RESET_COLOR%} '
+PROMPT+="%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(git_prompt_ahead)%{$RESET_COLOR%} ${return_code}%{$BLUE%}>%{$RESET_COLOR%} "
 
 # Git prompt format
-RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
+RPROMPT="%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}"
 # RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)%{$RESET_COLOR%}'
