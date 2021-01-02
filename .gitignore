@@ -3,3 +3,4 @@
 *.zwc
 
 bin/antibody
+bin/platform/*
