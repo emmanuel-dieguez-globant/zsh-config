@@ -12,8 +12,11 @@ source <(antibody init)
 antibody bundle robbyrussell/oh-my-zsh path:plugins/extract
 antibody bundle robbyrussell/oh-my-zsh path:plugins/sudo
 antibody bundle robbyrussell/oh-my-zsh path:plugins/z
+antibody bundle robbyrussell/oh-my-zsh path:plugins/fzf
 
 source $ROOT_DIR/system/bundles.sh
+
+antibody bundle robbyrussell/oh-my-zsh path:oh-my-zsh.sh
 
 # Default and custom aliases
 source $ROOT_DIR/system/aliases.sh
