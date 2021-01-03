@@ -10,13 +10,17 @@ source <(antibody init)
 
 # Default and custom bundles
 antibody bundle robbyrussell/oh-my-zsh path:plugins/extract
+antibody bundle robbyrussell/oh-my-zsh path:plugins/fzf
+antibody bundle robbyrussell/oh-my-zsh path:plugins/git
 antibody bundle robbyrussell/oh-my-zsh path:plugins/sudo
 antibody bundle robbyrussell/oh-my-zsh path:plugins/z
-antibody bundle robbyrussell/oh-my-zsh path:plugins/fzf
 
 source $ROOT_DIR/system/bundles.sh
 
 antibody bundle robbyrussell/oh-my-zsh path:oh-my-zsh.sh
+
+# Set custom theme
+antibody bundle edieguez/zsh-config path:themes/aya.zsh-theme branch:antibody-migration
 
 # Default and custom aliases
 source $ROOT_DIR/system/aliases.sh
