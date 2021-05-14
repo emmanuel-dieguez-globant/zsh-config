@@ -1,5 +1,5 @@
 #compdef jdk
-export JDK_HOME=/opt/java
+: ${JDK_HOME=/opt/java}
 
 _jdk() {
   _alternative "($(ls $JDK_HOME))"
@@ -8,3 +8,4 @@ _jdk() {
 }
 
 _jdk "$@"
+
