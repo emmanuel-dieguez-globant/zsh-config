@@ -1,5 +1,4 @@
 # Set your custom environment variables here
-export API_BOT_TOKEN='1018896613:AAHvMo0q7M_Z2pw1NcemCdsb9pOT_J5CDPI'
 export JAVA_HOME="$HOME/.current_jdk"
 export GOROOT='/opt/go'
 export GOPATH='/opt/gopath'
