@@ -1,6 +1,6 @@
 # Custom enviroment and path modifications
 export ROOT_DIR="$HOME/.zsh-config"
-export CUSTOM_PATH=".:$ROOT_DIR/bin:$ROOT_DIR/bin/platform"
+export CUSTOM_PATH=".:$ROOT_DIR/bin:$ROOT_DIR/bin/local"
 source $ROOT_DIR/system/environment.sh
 
 # Antibody official site
