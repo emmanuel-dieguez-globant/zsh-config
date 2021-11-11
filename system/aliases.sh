@@ -1,1 +1,1 @@
-alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3'
+alias youtube-dl-mp3='youtube-dl --add-metadata --extract-audio --audio-format mp3'
