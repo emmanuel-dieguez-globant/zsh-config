@@ -24,10 +24,5 @@ source "$ROOT_DIR/system/bundles.sh"
 source "$ROOT_DIR/system/aliases.sh"
 source "$ROOT_DIR/system/functions.sh"
 
-# Source local configuration files if they exists
-source_if_exist "$ROOT_DIR/system/bundles_local.sh"
-source_if_exist "$ROOT_DIR/system/aliases_local.sh"
-source_if_exist "$ROOT_DIR/system/functions_local.sh"
-
 # Set custom theme
 antibody bundle edieguez/zsh-config path:themes/aya.zsh-theme branch:antibody-migration
