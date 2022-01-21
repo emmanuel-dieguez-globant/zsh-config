@@ -14,6 +14,14 @@ source "$ROOT_DIR/system/environment.sh"
 
 PATH="$CUSTOM_PATH:$PATH"
 
+# Remove duplicates from history
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+
 # Antibody official site
 # https://getantibody.github.io
 export ANTIBODY_HOME=$HOME/.antibody
