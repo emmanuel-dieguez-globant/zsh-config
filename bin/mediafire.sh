@@ -1,4 +1,4 @@
-#!/bin/bash -
+#! /usr/bin/env bash
 #===============================================================================
 #
 #          FILE: mediafire.sh
@@ -49,7 +49,7 @@ function init_regex() {
 }
 
 function set_HTTP_sample() {
-    wget -qU $user_agent -O $smp_file $1
+    wget -qU "$user_agent" -O $smp_file $1 2> /dev/null
     restore_sample
 }
 
@@ -63,17 +63,17 @@ function draw_regex() {
 }
 
 function get_file_link() {
-    draw_regex 'kNO =.+'
+    draw_regex 'href="https:\/\/download[^"]+"'
     draw_regex '"[^"]+"'
     draw_regex '[^"]+'
 }
 
 function get_file_name () {
-    draw_regex 'Iu=[^;]+'
-    draw_regex "'[^']+'"
-    draw_regex "[^']+"
+    draw_regex '<div class="filename">[^<]+<\/div>'
+    draw_regex '>[^<]+'
+    draw_regex '[^>]+'
 
-    file_name=$(cat $rgx_file)
+    file_name=$(cat $rgx_file | head -n 1)
 }
 
 #  Main script
@@ -82,7 +82,7 @@ init_regex
 #  Arguments loop
 for url in $@; do
     set_HTTP_sample "$url"
-    ((cnt+=1)); err=1
+    ((cnt+=1))
 
     get_file_name
     cout "$BOLD;$F_GREEN" "Mediafire[$cnt]: $file_name\n"
@@ -90,21 +90,8 @@ for url in $@; do
     restore_sample
     get_file_link
 
-    while [ ! -s "$rgx_file" -a $err -le 1 ]; do
-
-        which google-chrome > /dev/null &&
-            google-chrome --incognito "$url" 2> /dev/null ||
-            chromium-browser --incognito "$url" 2> /dev/null || exit
-
-        set_HTTP_sample "$url"
-        get_file_link
-
-        ((err+=1))
-    done
-
     cat $rgx_file >> $lnk_file
 done
 
 #  Download section
-# [ -s $rgx_file ] && wget -U "$user_agent" -ct0 -i $lnk_file
-[ -s $rgx_file ] && aria2c -U "$user_agent" -i $lnk_file
+[ -s $rgx_file ] && wget -U "$user_agent" -ct0 -i $lnk_file
