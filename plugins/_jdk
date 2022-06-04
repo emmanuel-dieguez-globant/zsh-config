@@ -2,7 +2,7 @@
 : ${JDK_HOME=/opt/java}
 
 _jdk() {
-  _alternative "($(ls $JDK_HOME))"
+  _alternative "($(ls -l $JDK_HOME | grep '^d' | cut -d' ' -f9))"
 
   return 0
 }
