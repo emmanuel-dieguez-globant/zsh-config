@@ -8,3 +8,7 @@ _jdk() {
 }
 
 _jdk "$@"
+
+jdk() {
+  ln -sfn "$JDK_HOME/$1" $HOME/.current_jdk
+}
