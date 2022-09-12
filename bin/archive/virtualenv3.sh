@@ -8,4 +8,8 @@ if [ $# -eq 0 ]; then
     ls ~/.virtualenvs
 else
     python3 -m venv ~/.virtualenvs/$1
+    source ~/.virtualenvs/$1/bin/activate
+    python -m pip install -U pip autopep8 ipython
+
+    deactivate
 fi

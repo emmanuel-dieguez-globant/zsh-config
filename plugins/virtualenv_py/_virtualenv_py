@@ -1,0 +1,12 @@
+#compdef activate
+
+_activate() {
+  if [ -d $VENV_HOME ]; then
+    local virtualenvs=$(ls -l $VENV_HOME | grep '^d' | grep -o '[^ ]*$')
+    _alternative "($virtualenvs)"
+  fi
+
+  return 0
+}
+
+_activate "$@"

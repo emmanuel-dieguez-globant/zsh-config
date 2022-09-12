@@ -1,6 +1,3 @@
-# Load custom plugins
-antibody bundle edieguez/zsh-config path:plugins kind:fpath
-
 # Load ZSH plugins
 export plugins=(
     command-not-found
@@ -8,6 +5,7 @@ export plugins=(
     fzf
     git
     sudo
+    virtualenv_py
     z
 )
 
