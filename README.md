@@ -1,2 +1,2 @@
 # zsh-config
-wget https://raw.githubusercontent.com/edieguez/zsh-config/master/system/zshrc -O ~/.zshrc
+curl https://raw.githubusercontent.com/edieguez/zsh-config/antibody-migration/system/install.sh | zsh

@@ -1,3 +1,7 @@
 .DS_Store
 *.antigen-compat
 *.zwc
+
+bin/antibody
+bin/local
+*_local.sh

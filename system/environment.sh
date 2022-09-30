@@ -1,7 +1,13 @@
-# Set your custom environment variables here
-CUSTOM_PATH+="."
+# Remove duplicates from history
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/current'
-CUSTOM_PATH+=":$JAVA_HOME/bin"
+# CUSTOM_PATH customization
+# export JAVA_HOME="$HOME/.current_jdk"
+# export CUSTOM_PATH="$JAVA_HOME/bin"
 
-PATH="$CUSTOM_PATH:$PATH"
+export SDKMAN_DIR="$HOME/.sdkman"

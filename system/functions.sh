@@ -1,15 +1,10 @@
-load() {
-    source "$ROOT_DIR/lib/$*"
-}
-
-md() {
-    mkdir -vp "$*" && cd "$*"
-}
-
 numcat() {
     sed '/./=' $1 | sed '/./N;s/\n/ /'
 }
 
-activate() {
-    source ~/.virtualenvs/$1/bin/activate
+google-translate() {
+    trans en:es "$*"
 }
+
+# Load functions for local environment
+source_if_exist "$ROOT_DIR/system/functions_local.sh"

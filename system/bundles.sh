@@ -1,14 +1,21 @@
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# Load ZSH plugins
+export plugins=(
+    command-not-found
+    extract
+    fzf
+    git
+    sudo
+    virtualenv_py
+    z
+)
 
-# Apply prompt theme
-antigen theme edieguez/zsh-config themes/aya
+# Load bundles for local environment
+source_if_exist "$ROOT_DIR/system/bundles_local.sh"
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle cp
-antigen bundle extract
-antigen bundle git
-antigen bundle z
+antibody bundle robbyrussell/oh-my-zsh path:oh-my-zsh.sh
 
-# Tell antigen that you're done.
-antigen apply
+# https://github.com/zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-syntax-highlighting path:zsh-syntax-highlighting.plugin.zsh
+
+# https://sdkman.io/install
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
