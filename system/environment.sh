@@ -1,4 +1,4 @@
-# Current directory
+# Set your custom environment variables here
 CUSTOM_PATH+="."
 
 # Groovy and Grails
