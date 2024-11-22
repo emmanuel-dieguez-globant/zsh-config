@@ -1,0 +1,14 @@
+#compdef jdk
+export JDK_HOME=/opt/java
+
+_jdk() {
+  _alternative "($(ls $JDK_HOME))"
+
+  return 0
+}
+
+jdk() {
+  ln -sfn "$JDK_HOME/$1" $HOME/.current_jdk
+}
+
+_jdk "$@"
