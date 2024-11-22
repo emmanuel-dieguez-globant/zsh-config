@@ -1,17 +1,9 @@
-# Clone antigen and custom repos
-if [[ ! -e ~/.antigen ]]; then
-    git clone https://github.com/zsh-users/antigen.git ~/.antigen
-    git clone https://github.com/edieguez/zsh-config.git ~/.antigen/bundles/edieguez/zsh-config
-fi
+autoload -Uz compinit && compinit
 
-# Antigen configuration
-source ~/.antigen/antigen.zsh
+source <(antibody init)
 
-# Load custom configuration
-source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
+antibody bundle robbyrussell/oh-my-zsh path:plugins/extract
+antibody bundle robbyrussell/oh-my-zsh path:plugins/sudo
+antibody bundle robbyrussell/oh-my-zsh path:plugins/z
 
-# Custom configuration
-if [[ ! -L ~/.zshrc ]]; then
-    rm ~/.zshrc
-    ln -s ~/.antigen/bundles/edieguez/zsh-config/system/zshrc ~/.zshrc
-fi
+antibody bundle edieguez/zsh-config path:themes/aya.zsh-theme
