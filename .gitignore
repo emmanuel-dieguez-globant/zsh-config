@@ -5,3 +5,5 @@
 bin/antibody
 bin/local
 *_local.sh
+
+plugins/zsh-syntax-highlighting
