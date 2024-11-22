@@ -9,11 +9,11 @@ source ~/.antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-# Load custom configuration
-source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
-
 # Apply prompt theme
 antigen theme edieguez/zsh-config themes/aya
+
+# Load custom configuration
+source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
 
 # Tell antigen that you're done.
 antigen apply
