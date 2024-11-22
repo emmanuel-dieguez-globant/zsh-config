@@ -1,11 +1,15 @@
 # Color shortcuts
-RED=[31m
-YELLOW=[33m
-WHITE=[37m
-BLUE=[34m
-RED_BOLD="[01;31m"
-GREEN_BOLD="[01;32m"
-RESET_COLOR=[00m
+RED=$fg[red]
+YELLOW=$fg[yellow]
+GREEN=$fg[green]
+WHITE=$fg[white]
+BLUE=$fg[blue]
+RED_BOLD=$fg_bold[red]
+YELLOW_BOLD=$fg_bold[yellow]
+GREEN_BOLD=$fg_bold[green]
+WHITE_BOLD=$fg_bold[white]
+BLUE_BOLD=$fg_bold[blue]
+RESET_COLOR=$reset_color
 
 if [[ -n $SSH_CONNECTION ]]; then
     PROMPT="%{$RED_BOLD%}(ssh) "
@@ -13,7 +17,31 @@ else
     PROMPT=""
 fi
 
-return_code="%(?..%{$RED%}%?)"
+# Format for git_prompt_info()
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+
+# Format for parse_git_dirty()
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$RED%}(*)"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+# Format for git_prompt_status()
+ZSH_THEME_GIT_PROMPT_UNMERGED=" %{$RED%}unmerged"
+ZSH_THEME_GIT_PROMPT_DELETED=" %{$RED%}deleted"
+ZSH_THEME_GIT_PROMPT_RENAMED=" %{$YELLOW%}renamed"
+ZSH_THEME_GIT_PROMPT_MODIFIED=" %{$YELLOW%}modified"
+ZSH_THEME_GIT_PROMPT_ADDED=" %{$GREEN%}added"
+ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
+
+# Format for git_prompt_ahead()
+ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
+
+# Format for git_prompt_long_sha() and git_prompt_short_sha()
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
+ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
+
+return_code="%(?..%{$RED%}%? %{$RESET_COLOR%})"
 
 # Prompt format
-PROMPT+="%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u ${return_code}%{$BLUE%}>%{$RESET_COLOR%} "
+PROMPT+='%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(git_prompt_ahead)%{$RESET_COLOR%} ${return_code}%{$BLUE%}>%{$RESET_COLOR%} '
+RPROMPT='%{$GREEN_BOLD%}$(git_current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
