@@ -14,7 +14,3 @@ md() {
 numcat() {
     sed '/./=' $1 | sed '/./N;s/\n/ /'
 }
-
-if [ -e $ROOT_DIR/system/functions_local.sh ]; then
-    source $ROOT_DIR/system/functions_local.sh
-fi
