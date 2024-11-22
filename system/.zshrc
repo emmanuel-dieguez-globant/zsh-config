@@ -10,10 +10,11 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle extract
 antigen bundle git
 antigen bundle mvn
 antigen bundle sudo
-antigen bundle extract
+antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Apply prompt theme
