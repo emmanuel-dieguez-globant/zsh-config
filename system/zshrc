@@ -3,6 +3,8 @@ setopt auto_cd
 setopt PROMPT_SUBST
 autoload colors && colors
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit
 
-source .zsh-config/system/system.sh
+source $HOME/.zsh-config/system/system.sh
+
+compinit
