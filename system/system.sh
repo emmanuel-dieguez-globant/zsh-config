@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Source functions
 #-------------------------------------------------------------------------------
-local ROOT_DIR="$HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/bin"
+local ROOT_DIR="$HOME/.antigen/bundles/edieguez/zsh-config/bin"
 PATH="$ROOT_DIR/bin:$PATH"
 
 source $ROOT_DIR/lib/environment.sh
