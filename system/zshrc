@@ -1,17 +1,17 @@
 # Clone antigen and custom repos
 if [[ ! -e ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
-    git clone https://github.com/emmanuel-dieguez-globant/zsh-config.git ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config
+    git clone https://github.com/edieguez/zsh-config.git ~/.antigen/bundles/edieguez/zsh-config
 fi
 
 # Antigen configuration
 source ~/.antigen/antigen.zsh
 
 # Load custom configuration
-source ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config/system/system.sh
+source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
 
 # Custom configuration
 if [[ ! -L ~/.zshrc ]]; then
     rm ~/.zshrc
-    ln -s ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config/system/zshrc ~/.zshrc
+    ln -s ~/.antigen/bundles/edieguez/zsh-config/system/zshrc ~/.zshrc
 fi
