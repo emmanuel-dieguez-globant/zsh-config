@@ -13,12 +13,10 @@ bt_status=$(rfkill | grep bluetooth | awk '{print $4}')
 if [ $bt_status = 'blocked' ] || [ $bt_status = 'unblocked' ]; then
     if [ $bt_status == 'blocked' ]; then
         rfkill unblock bluetooth
-        exit 1
     else
         rfkill block bluetooth
         exit 0
     fi
-else
-    exit 1
 fi
 
+exit 1
