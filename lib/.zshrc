@@ -24,7 +24,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 
 # Custom configuration
-if [[ ! -L ~./zshrc ]]; then
+if [[ ! -L ~/.zshrc ]]; then
 	rm ~/.zshrc
     ln -s ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/.zshrc ~/.zshrc
 fi
