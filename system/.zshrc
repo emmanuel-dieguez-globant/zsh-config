@@ -9,18 +9,20 @@ source ~/.antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
+# Apply prompt theme
+antigen theme edieguez/zsh-config themes/aya-no-git
+
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle cp
 antigen bundle extract
-antigen bundle git
-antigen bundle mvn
+# antigen bundle git
+# antigen bundle mvn
+# antigen bundle npm
 antigen bundle sudo
 antigen bundle z
+
+# Syntax highlighting and auto suggestions bundles.
 antigen bundle zsh-users/zsh-autosuggestions
-
-# Apply prompt theme
-antigen theme edieguez/zsh-config themes/aya
-
-# Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
