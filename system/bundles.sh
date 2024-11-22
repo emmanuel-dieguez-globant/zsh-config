@@ -3,3 +3,6 @@ antigen bundle cp
 antigen bundle extract
 antigen bundle git
 antigen bundle z
+
+# Tell antigen that you're done.
+antigen apply
