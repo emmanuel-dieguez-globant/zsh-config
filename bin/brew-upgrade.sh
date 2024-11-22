@@ -11,16 +11,16 @@ main() {
     brew update
     brew upgrade
 
-    packages="$(brew cask list --versions)"
+    packages="$(brew list --cask --versions)"
 
     for line in $packages; do
         local package=$(echo $line | cut -d' ' -f1)
         local version=$(echo $line | cut -d' ' -f2)
-        local last_version=$(brew cask info $package | head -n1 | cut -d' ' -f2)
+        local last_version=$(brew info --cask $package | head -n1 | cut -d' ' -f2)
 
         if [[ $version != $last_version ]]; then
             cout "01;33" "[!] Updating $package $version -> $last_version\n"
-            brew cask reinstall $package
+            brew reinstall --cask $package
         else
             cout "01;32" "[!] $package $version is up to date\n"
         fi
