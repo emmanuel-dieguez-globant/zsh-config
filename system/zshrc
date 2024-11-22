@@ -7,12 +7,6 @@ fi
 # Antigen configuration
 source ~/.antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-# Apply prompt theme
-antigen theme emmanuel-dieguez-globant/zsh-config themes/aya
-
 # Load custom configuration
 source ~/.antigen/bundles/emmanuel-dieguez-globant/zsh-config/system/system.sh
 

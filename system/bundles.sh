@@ -1,3 +1,11 @@
+ANTIGEN_CACHE=false
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Apply prompt theme
+antigen theme emmanuel-dieguez-globant/zsh-config themes/aya
+
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle cp
 antigen bundle extract
