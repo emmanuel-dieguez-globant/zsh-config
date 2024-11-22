@@ -18,6 +18,7 @@ antigen bundle sudo
 # antigen bundle pip
 # antigen bundle vagrant
 # antigen bundle command-not-found
+antigen bundle extract
 
 antigen theme edieguez/zsh-config themes/aya
 
