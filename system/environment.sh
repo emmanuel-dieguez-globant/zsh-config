@@ -2,8 +2,10 @@
 CUSTOM_PATH+="."
 
 # Groovy and Grails
-# export JAVA_HOME='/usr/lib/jvm/java-7-openjdk-amd64/'
-# CUSTOM_PATH+=':/opt/groovy/bin'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/current'
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_79-osx/'
+CUSTOM_PATH+=":$JAVA_HOME/bin"
+CUSTOM_PATH+=":/usr/local/opt/maven/bin"
 # GRAILS_HOME='/opt/grails'
 # CUSTOM_PATH+=":$GRAILS_HOME/bin"
 
