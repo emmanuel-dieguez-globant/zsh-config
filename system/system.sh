@@ -5,6 +5,7 @@ source_if_exist() {
 }
 
 export ROOT_DIR="$HOME/.zsh-config"
+export ZSH_CUSTOM=$ROOT_DIR
 
 source_if_exist "$ROOT_DIR/system/environment_local.sh"
 source "$ROOT_DIR/system/environment.sh"
