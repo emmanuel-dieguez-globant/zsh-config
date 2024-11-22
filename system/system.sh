@@ -3,6 +3,8 @@ export ROOT_DIR="$HOME/.zsh-config"
 export CUSTOM_PATH=".:$ROOT_DIR/bin:$ROOT_DIR/bin/platform"
 source $ROOT_DIR/system/environment.sh
 
+# Antibody official site
+# https://getantibody.github.io
 export ANTIBODY_HOME=$HOME/.antibody
 source <(antibody init)
 
