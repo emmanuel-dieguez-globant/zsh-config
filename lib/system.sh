@@ -10,6 +10,7 @@ source $BASH_DIR/lib/environment.sh
 #-------------------------------------------------------------------------------
 # Aliases
 #-------------------------------------------------------------------------------
+alias measure_temp='/opt/vc/bin/vcgencmd measure_temp'
 #alias show_external_ip='curl ip.appspot.com'
 #alias hget='wget --header="Accept: text/html" --user-agent="Mozilla/5.0 (X11; Linux amd64; rv:32.0b4) Gecko/20140804164216 ArchLinux KDE Firefox/32.0b4" --referer=http://www.google.com -r http://www.sitio.com -e robots=off -k'
 
