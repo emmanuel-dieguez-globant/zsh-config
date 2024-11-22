@@ -7,5 +7,5 @@ if [ $# -eq 0 ]; then
     echo "Available virtualenvs:"
     ls ~/.virtualenvs
 else
-    /usr/bin/env virtualenv --python=/usr/bin/python3 ~/.virtualenvs/$1
+    python3 -m venv ~/.virtualenvs/$1
 fi
