@@ -27,7 +27,6 @@ main() {
     done
 
     brew cleanup
-    brew cask cleanup
 }
 
 # Invoke the main function
