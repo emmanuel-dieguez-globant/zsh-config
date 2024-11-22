@@ -50,17 +50,16 @@ virtualenv() {
 }
 
 virtualenv3() {
-	if [ ! -d ~/.virtualenvs ]; then
-		mkdir -v ~/.virtualenvs
-	fi
+    if [ ! -d ~/.virtualenvs ]; then
+        mkdir -v ~/.virtualenvs
+    fi
 
-	if [ $# -eq 0 ]; then
-		echo "Available virtualenvs:"
-		ls ~/.virtualenvs
-	else
-		/usr/bin/virtualenv --python=/usr/bin/python3 --no-site-packages ~/.virtualenvs/$1
-	fi
-
+    if [ $# -eq 0 ]; then
+        echo "Available virtualenvs:"
+        ls ~/.virtualenvs
+    else
+        /usr/bin/virtualenv --python=/usr/bin/python3 --no-site-packages ~/.virtualenvs/$1
+    fi
 }
 
 cout() {
@@ -151,7 +150,6 @@ demi() {
 
 activate() {
     source ~/.virtualenvs/$1/bin/activate
-    #cd ~/Projects/Python/$1
 }
 
 generate_qr() {
@@ -175,9 +173,19 @@ py2bin() {
 }
 
 ovpn() {
-	echo "
-script-security 2
-up /etc/openvpn/update-resolv-conf.sh
-down /etc/openvpn/update-resolv-conf.sh
-" >> "$1"
+    echo "
+	script-security 2
+	up /etc/openvpn/update-resolv-conf.sh
+	down /etc/openvpn/update-resolv-conf.sh
+    " >> "$1"
+}
+
+dropbox_sync() {
+    dropbox start && watch -n1 dropbox status && dropbox stop
+    dropbox autostart n
+}
+
+docker_stop() {
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
 }
