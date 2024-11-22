@@ -1,10 +1,10 @@
 #-------------------------------------------------------------------------------
 # Source functions
 #-------------------------------------------------------------------------------
-local ROOT_DIR="$HOME/.antigen/bundles/edieguez/zsh-config/bin"
+local ROOT_DIR="$HOME/.antigen/bundles/edieguez/zsh-config"
 PATH="$ROOT_DIR/bin:$PATH"
 
-source $ROOT_DIR/lib/environment.sh
+source $ROOT_DIR/system/environment.sh
 
 #-------------------------------------------------------------------------------
 # Aliases
