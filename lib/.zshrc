@@ -19,11 +19,12 @@ antigen bundle sudo
 # antigen bundle vagrant
 # antigen bundle command-not-found
 antigen bundle extract
+antigen bundle zsh-users/zsh-autosuggestions
 
 antigen theme edieguez/zsh-config themes/aya
 
 # Syntax highlighting bundle.
-# antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
 antigen apply
