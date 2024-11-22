@@ -1,8 +1,8 @@
 #-------------------------------------------------------------------------------
 # Source functions
 #-------------------------------------------------------------------------------
-local ROOT_DIR="$HOME/.antigen/bundles/edieguez/zsh-config"
-PATH="$ROOT_DIR/bin:$PATH"
+export ROOT_DIR="$HOME/.zsh-config"
+export PATH=".:$ROOT_DIR/bin:$PATH"
 
 source $ROOT_DIR/system/environment.sh
 source $ROOT_DIR/system/bundles.sh
