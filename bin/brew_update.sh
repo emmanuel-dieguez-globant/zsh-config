@@ -10,6 +10,7 @@ if [[ $? == 0 ]]; then
     brew upgrade
 
     echo "Updating cask applications"
+    brew cask update
     brew cask list | xargs brew cask install --force
 else
     echo "Brew is not installed in this system"
