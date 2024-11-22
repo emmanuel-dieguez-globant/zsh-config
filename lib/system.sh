@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Source functions
 #-------------------------------------------------------------------------------
-BASH_DIR="$HOME/.bash"
+local BASH_DIR="$HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git"
 PATH+=":$BASH_DIR/"
 
 source $BASH_DIR/lib/regex.sh

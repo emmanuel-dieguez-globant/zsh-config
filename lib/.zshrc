@@ -3,15 +3,8 @@ if [[ ! -e ~/.antigen ]]; then
     git clone https://github.com/zsh-users/antigen.git ~/.antigen
 fi
 
-if [[ ! -e ~/.bash ]]; then
-    git clone git@github.com:edieguez/zsh-config.git .bash
-    rm ~/.zshrc
-    ln -s ~/.bash/lib/.zshrc ~/.zshrc
-fi
-
 # Antigen configuration
 source ~/.antigen/antigen.zsh
-source ~/.bash/lib/system.sh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -29,4 +22,12 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell antigen that you're done.
 antigen apply
+
+# Custom configuration
+if [[ ! -L ~./zshrc ]]; then
+	rm ~/.zshrc
+    ln -s ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/.zshrc ~/.zshrc
+fi
+
+source ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-edieguez-SLASH-zsh-config.git/lib/system.sh
 unalias md
