@@ -10,12 +10,12 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 # Apply prompt theme
-antigen theme edieguez/zsh-config themes/aya-no-git
+antigen theme edieguez/zsh-config themes/aya
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle cp
 antigen bundle extract
-# antigen bundle git
+antigen bundle git
 # antigen bundle mvn
 # antigen bundle npm
 antigen bundle sudo
@@ -36,3 +36,4 @@ fi
 
 unalias md
 source ~/.antigen/bundles/edieguez/zsh-config/system/system.sh
+
