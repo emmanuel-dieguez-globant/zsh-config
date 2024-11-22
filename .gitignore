@@ -3,4 +3,5 @@
 *.zwc
 
 bin/antibody
-bin/platform/*
+bin/local
+*_local.sh

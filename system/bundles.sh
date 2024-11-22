@@ -9,3 +9,6 @@ antibody bundle robbyrussell/oh-my-zsh path:plugins/git
 antibody bundle robbyrussell/oh-my-zsh path:plugins/sudo
 antibody bundle robbyrussell/oh-my-zsh path:plugins/z
 
+if [ -e $ROOT_DIR/system/bundles_local.sh ]; then
+    source $ROOT_DIR/system/bundles_local.sh
+fi
