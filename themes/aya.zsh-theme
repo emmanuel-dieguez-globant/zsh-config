@@ -42,10 +42,11 @@ ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
-local return_code="%(?..%{$RED%}%? %{$RESET_COLOR%})"
+return_code="%(?..%{$RED%}%? %{$RESET_COLOR%})"
 
 # Prompt format
 PROMPT+='%{$GREEN_BOLD%}%n@%m%{$WHITE%}:%{$YELLOW%}%~%u$(git_prompt_ahead)%{$RESET_COLOR%} ${return_code}%{$BLUE%}>%{$RESET_COLOR%} '
 
 # Git prompt format
-RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
+# RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
+RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)%{$RESET_COLOR%}'
